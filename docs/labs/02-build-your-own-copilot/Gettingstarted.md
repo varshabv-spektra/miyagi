@@ -23,6 +23,22 @@ In this Lab, verification and retrieval of specific values, including End Point,
       - In the **Overview** **(1)** page, click on **Go to Foundry portal** (2).
 
          ![](./Media/S1.png) 
+
+         > **Important:** 
+         >
+         > 1. Click **Cancel** to close the **Create project** window.
+         >
+         >    ![](./Media/app-23.png)
+         >
+         > 1. Turn **Off** the **New Foundry** toggle.
+         >
+         >    ![](./Media/app-24.png)
+         >
+         > 1. If the **Feedback** pop-up appears, click **Continue without feedback** to dismiss it.
+         >
+         >     ![](./Media/app-25.png)
+         >
+
    
       - In the **Microsoft Foundry | Azure OpenAI**, from teh left navigation menu, select **Deployments (1)**, under the **Shared Resources** section.
 
@@ -93,4 +109,4 @@ In this lab, you will verify and retrieve configuration values such as Endpoint,
 
 ### Now click on **Next** from the lower right corner to move to the next page.
 
-![](./Media/n9.png)
+![](./Media/app-27.png)

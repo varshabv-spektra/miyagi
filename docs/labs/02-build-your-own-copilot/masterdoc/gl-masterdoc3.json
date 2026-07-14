@@ -4,23 +4,23 @@
     "Language": "English",
     "Files": [
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/docs/GL3-README.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/guided-lab/docs/labs/02-build-your-own-copilot/Getting-started(03).md",
         "Order": 1
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/docs/labs/02-build-your-own-copilot/Gettingstarted.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/guided-lab/docs/labs/02-build-your-own-copilot/Gettingstarted.md",
         "Order": 2
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/docs/labs/02-build-your-own-copilot/gl-lab2v2.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/guided-lab/docs/labs/02-build-your-own-copilot/gl-lab2v2.md",
         "Order": 3
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/docs/labs/02-build-your-own-copilot/gl-lab2-2.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/guided-lab/docs/labs/02-build-your-own-copilot/gl-lab2-2.md",
         "Order": 4
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/main/docs/labs/02-build-your-own-copilot/gl-lab3v2.md",
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/miyagi/guided-lab/docs/labs/02-build-your-own-copilot/gl-lab3v2.md",
         "Order": 5
       }
     ]

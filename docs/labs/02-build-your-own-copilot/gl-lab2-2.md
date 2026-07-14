@@ -1,30 +1,34 @@
-# Lab 1.2: Explore and Verify the Containerized Recommendation service in Azure Container App using Local Miyagi UI
+# Lab 2: Explore and Verify the Containerized Recommendation Service in Azure Container App using Local Miyagi UI
 
 ### Duration: 60 minutes
 
-In this Lab, you'll be exploring and verifying the automated Containerized Recommendation service in Azure Container App. 
- 
-### Task 1: Verify the Recommendation service running in the Container App by Personalizing
+## Lab Scenario
 
-1. In the Azure Portal page, in the Search resources, services, and docs (G+/) box at the top of the portal, enter **Container Apps (1)**, and then select **Container Apps (2)** under services.
+In this lab, you will explore and verify the containerized Recommendation Service deployed in Azure Container Apps using the local Miyagi UI. Begin by configuring the Miyagi UI to connect to the Azure endpoint of the Recommendation Service. Next, test various API calls through the UI to ensure accurate recommendations based on user inputs. Document any discrepancies or issues encountered during testing. Finally, validate the overall integration and functionality of the services.
 
-   ![](./Media/container-app-select.png)
+## Lab Overview
 
-1. In the **Container Apps** blade, select **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>**.
+In this lab, you will verify the Recommendation Service deployed on Azure Container Apps and integrate it with the local Miyagi UI. You will test the service using API requests, update the application's configuration to use the Azure endpoint, and validate that personalized recommendations are generated successfully through the user interface.
 
-   ![](./Media/container-ca-miyagi.png)
+## Lab objectives
 
-1. In the **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** page, from the left navigation pane select **Ingress** **(1)** under setting session and click on **Endpoints** **(2)** URL link.
+In this lab, you will complete the following tasks:
 
-   ![](./Media/container-ca-ingress.png)
+- Task 1: Verify the Recommendation service running in the Container App by personalizing
+- Task 2: Update Container App Recommendation service URL for Miyagi UI
+- Task 3: Access Recommendation Service running on Azure Container Apps from Local Miyagi-UI
 
-1. Navigate back to container app **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>**, and click on **Log Stream** under **Monitoring** from the left menu.
+## Task 1: Verify the Recommendation service running in the Container App by personalizing
 
-    ![](./Media/logstream.png)
+In this task, you will verify the Recommendation service running in the Container App by personalizing recommendations based on user preferences and testing the service's responses.
+
+1. Navigate back to the container app **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>**, and click on **Log Stream** under **Monitoring** from the left menu.
+
+    ![](./Media/img-13.png)
    
-      ![](./Media/containerapps-logsstream.png)
+      ![](./Media/img-14.png)
    
-     > **Note** : Please click on **Refresh** for the logs to show up .
+     > **Note** : Click **Refresh** for the logs to appear.
 
 1. Navigate back to **Miyagi Recommendations** page, scroll down to the **Recommendations**, click on **POST /personalize** expansion, and click on **Try it out**.
 
@@ -89,6 +93,8 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
 
 ### Task 2: Update Container App Recommendation service URL for Miyagi UI
 
+In this task, you will update the Container App Recommendation service URL for the Miyagi UI by modifying the configuration settings to ensure seamless integration between the front end and the service.
+
 1. Once you completed the review of the logs, click on **Ingress** **(1)** under **Settings** and copy **Endpoints** **(2)** URL link.
 
    ![](./Media/container-ca-ingress.png)
@@ -106,6 +112,8 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
 <validation step="f50c7e4e-0b5a-4ae2-bd9e-ff29a023f1d2" />
 
 ### Task 3: Access Recommendation Service running on Azure Container Apps from Local Miyagi-UI 
+
+In this task, you will access the Recommendation Service running on Azure Container Apps from your local Miyagi UI by configuring API endpoints and ensuring proper network connectivity.
 
 1. Open a new terminal: by navigating  **miyagi/ui** and right-click on **ui/typescript** , in cascading menu select **Open in Integrated Terminal**.
 
@@ -153,4 +161,9 @@ In this Lab, you'll be exploring and verifying the automated Containerized Recom
 
 ## Summary
 
-In this lab, you have updated the Containerized Recommendation service endpoint in Miyagi UI and verified it locally.
+In this lab, you have accomplished the following:
+
+- Verified the Recommendation Service by personalizing user interactions successfully.
+- Updated the Recommendation Service URL in Miyagi UI configuration.
+- Accessed the Recommendation Service from the local Miyagi UI effectively.
+

@@ -2,13 +2,27 @@
 
 ### Duration: 60 minutes
 
-In this Lab, you'll explore the process of containerizing a recommendation service and deploying it to Azure Container Apps. Containerization has become a key strategy in modern application development and deployment, providing a consistent and reproducible environment across various stages of the software development lifecycle. Azure Container Apps, part of Microsoft's Azure cloud platform, offers a managed container service that enables developers to deploy and scale containerized applications seamlessly.  
+## Lab scenario
+
+In this lab, you'll explore the process of containerizing a recommendation service and deploying it to Azure Container Apps. Containerization has become a key strategy in modern application development and deployment, providing a consistent and reproducible environment across various stages of the software development lifecycle. Azure Container Apps, part of Microsoft's Azure cloud platform, offers a managed container service that enables developers to deploy and scale containerized applications seamlessly.  
+
+## Lab objectives
+
+In this lab, you will complete the following tasks:
+
+- Task 1: Set up configuration for Miyagi app
+- Task 2: Run Miyagi frontend locally
+- Task 3: Persist embeddings in Azure AI Search
+- Task 4: Build Docker Images for the Recommendation Service
+- Task 5: Push the Docker Image of the Recommendation service to the Container registry
+- Task 6: Create a Container app for recommendation-service
+- Task 7: Verify Recommendation Service using Swagger
 
 ### Task 1: Setup configuration for miyagi app
 
 1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it.
 
-   ![](./Media/vs.png)
+   ![](./Media/img-05.png)
 
    >**Note** If **Join us in making promt-flow extension better!** window prompted please click on **No,thanks**.
 
@@ -26,9 +40,13 @@ In this Lab, you'll explore the process of containerizing a recommendation servi
 
    ![](./Media/image-rg-18.png) 
    
-1. Expand **miyagi>ui** directory and verify that **.env.** file is present. 
+1. Expand **miyagi>ui** directory and verify that **.env.** file is present.
+
+   ![](./Media/L2T1S5.png)
 
 1. Expand **miyagi/services/recommendation-service/dotnet** directory and verify that **appsettings.json** file is present.
+
+   ![](./Media/L2T1S6.png)
   
 1. In the **appsettings.json** file replace the following values for the variables below.
 
@@ -51,7 +69,9 @@ In this Lab, you'll explore the process of containerizing a recommendation servi
    
 1. Once after updating the values kindly save the file by pressing **CTRL + S**.
 
-1. Navigate to **miyagi/sandbox/usecases/rag/dotnet** and verify **.env** file is present.
+1. In the **miyagi** folder, expand **sandbox (1)/usecases (2)/rag (3)/dotnet (4)** and verify that the **.env (5)** file is present.
+
+   ![](./Media/miyagi-image(111).png)
   
 1. In the **.env** file replace the following values for the variables below.
 
@@ -171,13 +191,24 @@ In this Lab, you'll explore the process of containerizing a recommendation servi
 
    ![](./Media/docker2.png)
 
-1. In the **Welcome to Docker Desktop** window, click on **Continue without signing in**.
+1. In the **Welcome to Docker** window, click on **Skip**.
 
-   ![](./Media/without-signin.png)
+   ![](./Media/img-09.png)
+
+   >**Note:** If you still encounter the **WSL update failed** error, click **Quit**, then open **PowerShell** as an administrator and run the following command:
+   >
+
+   > ```powershell
+   > wsl --update
+   > ```
+
+   > On the **Docker Desktop** page, select **Try again** until the Docker engine starts.
 
 1. In the **Tell us about the work you do** window, click on **Skip**.
 
-1. In the VS code, navigate to **miyagi/services/recommendation-service/dotnet** right - click on dotnet in cascading menu, select **Open in Integrated Terminal**.
+1. Navigate back to **Visual Studio Code** window and navigate to **miyagi folder** and expand **services (1)/recommendation-service (2)/dotnet (3)** right - click on dotnet in cascading menu, select **Open in integrated Terminal (4)**
+
+   ![](./Media/aks-04.png)
 
 1. Run the following command to build a **Docker image**.
 
@@ -312,4 +343,18 @@ In this task, you'll will be creating a container app for the recommendation.
 
    ![](./Media/online-output-recommendation.png)    
 
-1. Now, click on **Next** from the lower right corner to move to the next page.
+## Summary
+
+In this lab, you have accomplished the following:
+
+- Configured the Miyagi app to ensure proper functionality and integration.
+- Successfully ran the Miyagi frontend locally for testing and interaction.
+- Persisted embeddings in Azure AI Search for efficient data retrieval.
+- Built Docker images for the Recommendation Service to facilitate deployment.
+- Pushed the Docker image of the Recommendation service to the container registry for storage.
+- Created a container app for the Recommendation service to enable cloud deployment.
+- Verified the Recommendation service using Swagger to ensure correct API functionality.
+
+### Now click on **Next** from the lower right corner to move to the next page
+
+![](./Media/app-28.png)
