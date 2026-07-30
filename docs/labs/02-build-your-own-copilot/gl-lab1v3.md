@@ -103,9 +103,9 @@ In this lab, you will explore the implementation of the Recommendation service, 
 
 The Recommendation service implements the RAG pattern using the Semantic Kernel SDK. The details of the implementation are captured in the Jupyter notebook in the folder miyagi/sandbox/usecases/rag/dotnet. You can open the notebook in VSCode and run the cells to understand step-by-step details of how the Recommendation Service is implemented. Pay special attention to how the RAG pattern is implemented using Semantic Kernel. Select the kernel as **.NET Interactive** in the top right corner of the notebook.
 
-1. In the Visual Studio Code, navigate to **miyagi/sandbox/usecases/rag/dotnet** folder and select **Getting-started.ipynb**.
+1. In the Visual Studio Code, navigate to **miyagi/sandbox/usecases/rag/dotnet** folder and select **rag-workflow.ipynb**.
 
-   ![](./Media/app-03.png)
+   ![](./Media/z0.png)
 
 1. In **Visual Studio Code**, open the terminal by pressing **CTRL+J**, and run the following command to verify the installation of **.NET version 10.x.x**.
 
@@ -118,7 +118,7 @@ The Recommendation service implements the RAG pattern using the Semantic Kernel 
    - **Python (3)** (by Microsoft)
    - **Jupyter (4)** (by Microsoft)
 
-   ![](Media/ext01.png)
+      ![](Media/ext01.png)
 
 1. Once installed, run the following commands in the terminal to set up the .NET Interactive kernel for Jupyter.
  
@@ -198,53 +198,59 @@ The Recommendation service implements the RAG pattern using the Semantic Kernel 
 
 1. In the **Load settings from .env file** code cell, click the **Run (▶)** button to execute the cell. Wait for the cell to complete successfully before proceeding to the next step.
 
-   ![](./Media/app-22.png)
+   ![](./Media/z1.png)
 
-1. In the **Prepare the kernal with memory using Azure Cognitive Search** code cell, click the **Run (▶)** button to execute the cell. Wait for the cell to complete successfully before proceeding to the next step.
+1. In the **Install the Semantic Kernel packages** code cell, click the **Run (▶)** button to execute the cell. Wait for the cell to complete successfully before proceeding to the next step.
 
-   ![](./Media/app-08.png)
+   ![](./Media/z2.png)
 
-   ![](./Media/app-09.png)
+1. In the **Check your Azure sign-in** code cell, click the **Run (▶)** button to execute the cell.
 
-1. In the **Setps to Use Service Principal with Enviroment Variable** code cell, click the **Run (▶)** button to execute the cell.
+   ![](./Media/z3.png)
 
-   ![](./Media/app-10.png)
+   ![](./Media/z4.png)
 
-1. In the **Kernal Builder** code cell, click the **Run (▶)** button to execute the cell. Wait for the cell to complete successfully before proceeding to the next step.
+1. In the **Build the kernel** code cell, click the **Run (▶)** button to execute the cell. Wait for the cell to complete successfully before proceeding to the next step.
 
-   ![](./Media/app-11.png)
+   ![](./Media/z5.png)
 
-1. In the **To make the kernel stateful, we will use Memory Plugin with a Azure Cognitive Search and Embedding backend** code cell, click the **Run (▶)** button to execute the cell.
+1. In the **Connect Azure AI Search as a vector store** code cell, click the **Run (▶)** button to execute the cell.
 
-   ![](./Media/app-12.png)
+   ![](./Media/z6.png)
 
-   ![](./Media/app-13.png)
+   ![](./Media/z7.png)
 
-   ![](./Media/app-14.png)
+1. In the **Chunk the dataset and persist the embeddings** code cell, click the **Run (▶)** button to execute the cell.
 
-1. In the **Search and retrieve documents using Semantic Kernel** code cell, click the **Run (▶)** button to execute the cell.
+   ![](./Media/z8.png)
 
-   ![](./Media/app-15.png)
+   ![](./Media/z9.png)
 
-1. In the **Grounding with Native Functions and SK's Memory** code cell, click the **Run (▶)** button to execute the cell.
+1. In the **Search and retrieve documents** code cell, click the **Run (▶)** button to execute the cell.
 
-   ![](./Media/app-16.png)
+   ![](./Media/z10.png)
 
-1. In the **Set Kernal Arguments** code cell, click the **Run (▶)** button to execute the cell. Wait for the cell to complete successfully before proceeding to the next step
+1. In the **Load the grounded prompt** code cell, click the **Run (▶)** button to execute the cell. Wait for the cell to complete successfully before proceeding to the next step
 
-   ![](./Media/app-17.png)
+   ![](./Media/z11.png)
 
-   ![](./Media/app-18.png)
+1. In the **Set the kernel arguments** code cell, click the **Run (▶)** button to execute the cell. 
 
-1. In the **Create native function** code cell, click the **Run (▶)** button to execute the cell. 
+   ![](./Media/z12.png)
 
-   ![](./Media/app-19.png)
+   ![](./Media/z13.png)
 
-   ![](./Media/app-20.png)
+1. In the **Create a native function** code cell, click the **Run (▶)** button to execute the cell. 
+
+   ![](./Media/z14.png)
+
+   ![](./Media/z15.png)
+
+   ![](./Media/z16.png)
 
 1. In the **Invoke the LLM** code cell, click the **Run (▶)** button to execute the cell. 
 
-   ![](Media/app-21.png)
+   ![](Media/z17.png)
 
 >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
