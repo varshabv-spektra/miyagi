@@ -95,7 +95,7 @@ In this task, you will verify the Recommendation service running in the Containe
 
 In this task, you will update the Container App Recommendation service URL for the Miyagi UI by modifying the configuration settings to ensure seamless integration between the front end and the service.
 
-1. Once you completed the review of the logs, click on **Ingress** **(1)** under **Settings** and copy **Endpoints** **(2)** URL link.
+1. Once you completed the review of the logs, click on **Ingress** **(1)** under **Networking** and copy **Endpoints** **(2)** URL link.
 
    ![](./Media/container-ca-ingress.png)
 
@@ -103,6 +103,13 @@ In this task, you will update the Container App Recommendation service URL for t
 
    ![](./Media/cntr4.png)
    
+   > **Prerequisite:** Before pasting the Endpoint URL here, confirm the recommendation service Container App's
+   > ingress **target port is 8080**, not 80 (`az containerapp ingress show -n ca-miyagi-rec-[DID] -g miyagi-rg-[DID]`).
+   > If it's still 80, calls from the UI to this URL will fail with
+   > `upstream connect error or disconnect/reset before headers... connection refused`,
+   > even though `.env` is set correctly — the recommendation service listens on port 8080 inside the container
+   > (see the Dockerfile's `EXPOSE 8080`), so ingress must be configured to match.
+
 >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 

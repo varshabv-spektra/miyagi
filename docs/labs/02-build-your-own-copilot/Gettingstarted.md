@@ -76,9 +76,9 @@ In this Lab, verification and retrieval of specific values, including End Point,
    
       ![](./Media/image-rg-13.png)
 
-   - On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade, under **Settings** section, verify the **Primary admin Key** value.
+   - On **acs-<inject key="DeploymentID" enableCopy="false"/>** blade, choose **Keys** under **Security + networking** section, verify the **Primary admin Key** value.
    
-      ![](./Media/image-rg-14.png)
+      ![](./Media/z18.png)
 
 1. To verify the values for "**cosmosDbUri**" and "**cosmosDbName**," please follow the steps below:
 

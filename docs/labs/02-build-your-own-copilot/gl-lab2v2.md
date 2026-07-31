@@ -66,6 +66,12 @@ In this lab, you will complete the following tasks:
    > **Note**: FYI, the above values/Keys/Endpoints/ConnectionString of Azure Resources are directly injected to labguide. Leave default settings for "cosmosDbContainerName": "recommendations" and "logLevel": "Trace".
 
       ![](./Media/appsetting-update.png)
+
+   > **Caution:** After clicking the copy icon next to each `<inject>` value, paste it into `appsettings.json`
+   > and **visually verify it isn't duplicated**. Some browsers/portal widgets copy the value twice, producing
+   > strings like `miyagi-CompletionModel-2334796miyagi-CompletionModel-2334796` instead of
+   > `miyagi-CompletionModel-2334796`. A duplicated `cosmosDbConnectionString` or other value will cause the
+   > recommendation service to crash on startup.
    
 1. Once after updating the values kindly save the file by pressing **CTRL + S**.
 
@@ -210,6 +216,12 @@ In this lab, you will complete the following tasks:
 
    ![](./Media/aks-04.png)
 
+   > **Important:** If you edit `appsettings.json` **after** you have already built this image once, you must
+   > rebuild it again before running — the Dockerfile copies `appsettings.json` into the image at build time,
+   > so re-running an old image silently keeps the old (possibly incorrect) config. This causes:
+   > `System.ArgumentException: Format of the initialization string does not conform to specification`
+   > from `CosmosClient` on startup, even though the file on disk is already correct.
+
 1. Run the following command to build a **Docker image**.
 
    ```
@@ -335,7 +347,7 @@ In this task, you'll will be creating a container app for the recommendation.
 
    ![](./Media/container-ca-miyagi.png)
 
-1. In the **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** page, from left navigation pane select **Ingress** **(1)** under setting session and click on **Endpoints** **(2)** URL link.
+1. In the **ca-miyagi-rec-<inject key="DeploymentID" enableCopy="false"/>** page, from left navigation pane select **Ingress** **(1)** under **Networking** and click on **Endpoints** **(2)** URL link.
 
    ![](./Media/container-ca-ingress.png)
 
@@ -343,6 +355,12 @@ In this task, you'll will be creating a container app for the recommendation.
 
    ![](./Media/online-output-recommendation.png)    
 
+   >**Note:** Confirm the recommendation service Container App's
+   > ingress **target port is 8080**, not 80 (`az containerapp ingress show -n ca-miyagi-rec-[DID] -g miyagi-rg-[DID]`).
+   > If it's still 80, calls from the UI to this URL will fail with
+   > `upstream connect error or disconnect/reset before headers... connection refused`,
+   > even though `.env` is set correctly — the recommendation service listens on port 8080 inside the container
+   > (see the Dockerfile's `EXPOSE 8080`), so ingress must be configured to match.
 ## Summary
 
 In this lab, you have accomplished the following:
