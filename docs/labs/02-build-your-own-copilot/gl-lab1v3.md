@@ -90,13 +90,6 @@ In this lab, you will configure the Miyagi app by setting up the environment, in
 
 1. After updating the values, save the file by pressing **CTRL + S**.
 
->**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
-
-<validation step="eb73d21f-c370-4eba-9380-8d78b6bfc326" />
-
 ## Task 2: Understanding the implementation of the Recommendation service
 
 In this lab, you will explore the implementation of the Recommendation service, focusing on its algorithms and data processing methods to deliver personalized suggestions.
@@ -252,13 +245,6 @@ The Recommendation service implements the RAG pattern using the Semantic Kernel 
 
    ![](Media/z17.png)
 
->**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
-
-<validation step="571b621e-6e53-4fbc-b3ec-6e614bc779a7" />
-
 ## Task 3: Run recommendation service locally
 
 In this lab, you will set up the environment, install necessary dependencies, and run the Recommendation service locally to test and develop features effectively.
@@ -273,6 +259,8 @@ In this lab, you will set up the environment, install necessary dependencies, an
     dotnet build
     dotnet run
     ```
+
+   >**Note:** If you encounter any failures while running this command, please verify the appsettings.json file. **[Expand miyagi/services/recommendation-service/dotnet directory and verify the appsettings.json]**, if the required values are missing or not configured correctly, navigate to Task 1, Step 7 and update the file with the appropriate values and try running above commands again.
 
    > **Note**: Let the command run; meanwhile, you can proceed with the next step.
 
