@@ -89,24 +89,6 @@ Use the **slider (three vertical dots)** located between the **Virtual Machine**
  
 ## Login to the Azure Portal
 
-1. Minimize the **Docker Desktop** by click on **Minimize** button.
-
-   ![](Media/miyagi-image1.png)
-
-   >**Note:** If you encounter the WSL Update failed error in the Docker Desktop application, click on **Quit** and reopen the Docker Desktop application from the Desktop.
-   
-      ![](Media/err.png)
-  
-    >If you face any issue, the WSL distro Docker Desktop relies on has exited unexpectedly. This usually happens as a result of an external entity terminating WSL. Click on the **Restart** Button.
-  
-     ![](Media/docker-error.png)
-
-   >**Note:** If you still encounter the **WSL update failed** error, click **Quit**, then open **PowerShell** as an administrator and run the following command:
-   >
-   > ```powershell
-   > wsl --update
-   > ```
-
 1. In the JumpVM, click on the Azure portal shortcut of the Microsoft Edge browser, which is created on the desktop.
 
    ![](Media/img-04.png)
